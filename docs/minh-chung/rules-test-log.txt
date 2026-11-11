@@ -1,0 +1,62 @@
+KẾT QUẢ KIỂM THỬ LUẬT BẢO MẬT (Firebase Emulator) - 11/11/2026 16:57
+Lệnh: cd tools/rules-test && npm install && npm test
+ok = thao tác cho kết quả đúng mong đợi (hợp lệ thì thành công, trái phép thì bị PERMISSION_DENIED)
+
+ok   users/A
+ok   users/B
+ok   users/C
+ok   users/D
+ok   A cannot write users/B
+ok   A status online + activeConv
+ok   A cannot write status/B
+ok   A reads nonexistent A_B
+ok   C cannot read A_B
+ok   C cannot create A_B
+ok   A creates A_B
+ok   B cannot overwrite A_B
+ok   A sends multi-path message
+ok   A sends image multi-path
+ok   B unread incremented to 2 (got 2)
+ok   B reads own userChats
+ok   A cannot read userChats/B
+ok   A cannot set B unread to 50
+ok   B resets own unread
+ok   B reads messages (limitToLast 20)
+ok   C cannot read messages
+ok   C cannot read typing
+ok   C cannot write message
+ok   B cannot send as A
+ok   B cannot edit A text
+ok   B cannot recall A msg
+ok   A recalls image (last msg) + lastMessage update
+ok   A cannot un-recall
+ok   A cannot delete message node
+ok   B reacts on A msg + notification
+ok   B cannot set reaction of A
+ok   B removes own reaction
+ok   B typing self
+ok   B cannot set typing of A
+ok   C cannot set typing in A_B
+ok   B onDisconnect remove typing
+ok   C cannot read readStatus
+ok   A cannot forge notif fromUid=C
+ok   A cannot read notifications/B
+ok   B reads own notifications
+ok   B marks notif read
+ok   A cannot mark B notif read
+ok   A creates group (one multi-path update)
+ok   D cannot read group
+ok   D cannot read group messages
+ok   C reads group messages
+ok   B sends location in group
+ok   B renames group
+ok   D cannot rename group
+ok   D cannot add self to group
+ok   B cannot remove C (not admin)
+ok   B adds D
+ok   A (admin) removes C
+ok   C can no longer read messages
+ok   A (admin) leaves group, transfers admin
+ok   new admin is B (got B)
+ok   A cannot send to group after leaving
+57 passed, 0 failed

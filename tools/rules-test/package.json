@@ -1,0 +1,13 @@
+{
+  "name": "chat-rules-test",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "firebase emulators:exec --only database --project demo-chat \"node test.mjs\""
+  },
+  "devDependencies": {
+    "@firebase/rules-unit-testing": "^5.0.0",
+    "firebase": "^13.0.0",
+    "firebase-tools": "^13.0.0"
+  }
+}
